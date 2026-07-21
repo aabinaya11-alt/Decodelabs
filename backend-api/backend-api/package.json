@@ -1,0 +1,27 @@
+{
+  "name": "backend-api",
+  "version": "1.0.0",
+  "description": "A RESTful API built with Node.js, Express.js and JSON file storage, demonstrating CRUD operations, validation, error handling and clean architecture.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "rest-api",
+    "crud",
+    "json-storage"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

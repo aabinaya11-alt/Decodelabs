@@ -1,0 +1,18 @@
+[
+  {
+    "id": "a1b2c3d4",
+    "title": "Sample Item One",
+    "description": "This is the first sample item used to demonstrate the API.",
+    "category": "General",
+    "status": "active",
+    "createdAt": "2026-01-01T10:00:00.000Z"
+  },
+  {
+    "id": "e5f6g7h8",
+    "title": "Sample Item Two",
+    "description": "This is the second sample item used to demonstrate the API.",
+    "category": "General",
+    "status": "inactive",
+    "createdAt": "2026-01-02T10:00:00.000Z"
+  }
+]
