@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Responsive Frontend Interface — Blueprint Edition</title>
+<meta name="description" content="A modern, responsive landing page demonstrating semantic HTML5, CSS3 and vanilla JavaScript best practices." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Roboto:wght@400;500;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <nav class="navbar container" aria-label="Primary">
+    <a href="#hero" class="logo">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span class="logo-text">Blueprint<span class="accent">.dev</span></span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#vision" class="nav-link">Vision</a></li>
+      <li><a href="#toolkit" class="nav-link">Toolkit</a></li>
+      <li><a href="#strategy" class="nav-link">Strategy</a></li>
+      <li><a href="#design" class="nav-link">Design</a></li>
+      <li><a href="#semantic" class="nav-link">Semantics</a></li>
+      <li><a href="#layout" class="nav-link">Layout</a></li>
+      <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+      <li><a href="#final" class="nav-link nav-cta">Start Building</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero" id="hero">
+    <div class="hero-grid-overlay" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">FIG. 01 &mdash; SCALE 1:1 &mdash; RESPONSIVE SYSTEM</p>
+        <h1>Responsive Frontend<br><span class="accent-text">Interface</span></h1>
+        <p class="hero-lead">
+          A hands-on blueprint for building web applications that adapt to any screen &mdash;
+          drafted with semantic HTML5, styled with CSS3 Grid and Flexbox, and brought to life
+          with vanilla JavaScript. No frameworks, just fundamentals.
+        </p>
+        <div class="hero-actions">
+          <a href="#vision" class="btn btn-primary">Explore the Blueprint <i class="fa-solid fa-arrow-right-long"></i></a>
+          <a href="#toolkit" class="btn btn-ghost">View Toolkit</a>
+        </div>
+        <ul class="hero-stats">
+          <li><strong>3</strong><span>Core Technologies</span></li>
+          <li><strong>10</strong><span>Structured Sections</span></li>
+          <li><strong>100%</strong><span>Framework Free</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="corner-frame">
+          <svg viewBox="0 0 480 420" class="hero-svg" role="img" aria-label="Blueprint drawing of a desktop, tablet and mobile screen">
+            <defs>
+              <linearGradient id="screenGlow" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#A9C6E8"/>
+                <stop offset="100%" stop-color="#4C7FB0"/>
+              </linearGradient>
+            </defs>
+            <rect x="60" y="40" width="300" height="190" rx="10" fill="none" stroke="#A9C6E8" stroke-width="2.5"/>
+            <rect x="76" y="56" width="268" height="140" rx="4" fill="url(#screenGlow)" opacity="0.18"/>
+            <line x1="76" y1="90" x2="344" y2="90" stroke="#A9C6E8" stroke-width="1.5" stroke-dasharray="4 4"/>
+            <rect x="90" y="104" width="80" height="10" rx="2" fill="#A9C6E8"/>
+            <rect x="90" y="126" width="140" height="8" rx="2" fill="#4C7FB0"/>
+            <rect x="90" y="144" width="110" height="8" rx="2" fill="#4C7FB0"/>
+            <rect x="240" y="104" width="94" height="60" rx="4" fill="none" stroke="#8B5A3C" stroke-width="1.5"/>
+            <rect x="150" y="230" width="120" height="14" rx="3" fill="none" stroke="#A9C6E8" stroke-width="2"/>
+            <!-- Tablet -->
+            <rect x="330" y="150" width="110" height="150" rx="12" fill="none" stroke="#8B5A3C" stroke-width="2.5"/>
+            <rect x="342" y="168" width="86" height="112" rx="3" fill="url(#screenGlow)" opacity="0.15"/>
+            <line x1="342" y1="192" x2="428" y2="192" stroke="#8B5A3C" stroke-width="1.2" stroke-dasharray="3 3"/>
+            <rect x="350" y="204" width="50" height="6" rx="2" fill="#8B5A3C"/>
+            <rect x="350" y="218" width="70" height="5" rx="2" fill="#8B5A3C"/>
+            <rect x="350" y="230" width="60" height="5" rx="2" fill="#8B5A3C"/>
+            <!-- Mobile -->
+            <rect x="30" y="250" width="80" height="140" rx="14" fill="none" stroke="#A9C6E8" stroke-width="2.5"/>
+            <rect x="40" y="266" width="60" height="108" rx="3" fill="url(#screenGlow)" opacity="0.2"/>
+            <rect x="48" y="278" width="44" height="6" rx="2" fill="#A9C6E8"/>
+            <rect x="48" y="292" width="30" height="5" rx="2" fill="#A9C6E8"/>
+            <rect x="48" y="302" width="36" height="5" rx="2" fill="#A9C6E8"/>
+            <circle cx="70" cy="358" r="7" fill="none" stroke="#A9C6E8" stroke-width="2"/>
+            <!-- Measurement guide lines -->
+            <line x1="20" y1="30" x2="20" y2="400" stroke="#8B5A3C" stroke-width="1" stroke-dasharray="2 5" opacity="0.6"/>
+            <line x1="20" y1="30" x2="450" y2="30" stroke="#8B5A3C" stroke-width="1" stroke-dasharray="2 5" opacity="0.6"/>
+          </svg>
+          <span class="tag tag-bottom">MOBILE &rarr; TABLET &rarr; DESKTOP</span>
+        </div>
+      </div>
+    </div>
+    <a href="#vision" class="scroll-cue" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></a>
+  </section>
+
+  <section class="vision" id="vision">
+    <div class="container">
+      <p class="eyebrow center">FIG. 02 &mdash; DESIGN PHILOSOPHY</p>
+      <h2 class="section-title center">Our Vision</h2>
+
+      <div class="vision-grid">
+        <div class="vision-copy reveal">
+          <p>
+            Every great interface begins as a plan, not a pixel. Our goal is to draft web
+            experiences that are <strong>mobile-first</strong> from the very first line of
+            markup, built on a foundation that welcomes every screen size, input method and
+            assistive technology rather than bolting them on afterward.
+          </p>
+          <p>
+            That means writing HTML that describes meaning before appearance, styling layouts
+            that reflow instead of break, and treating accessibility as a structural requirement,
+            not a finishing touch.
+          </p>
+        </div>
+
+        <div class="vision-illustration reveal" aria-hidden="true">
+          <div class="corner-frame small">
+            <span class="tag tag-top">FIG.02</span>
+            <svg viewBox="0 0 320 260" class="vision-svg" role="img" aria-label="Illustration of a mobile-first layout expanding into a desktop layout">
+              <rect x="20" y="30" width="70" height="130" rx="10" fill="none" stroke="#8B5A3C" stroke-width="2.5"/>
+              <rect x="30" y="46" width="50" height="98" rx="3" fill="#A9C6E8" opacity="0.25"/>
+              <rect x="36" y="54" width="38" height="6" rx="2" fill="#8B5A3C"/>
+              <rect x="36" y="66" width="30" height="5" rx="2" fill="#4C7FB0"/>
+              <rect x="36" y="76" width="34" height="5" rx="2" fill="#4C7FB0"/>
+              <path d="M110 95 H150" stroke="#4C7FB0" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+              <defs>
+                <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                  <path d="M0,0 L8,4 L0,8 Z" fill="#4C7FB0"/>
+                </marker>
+              </defs>
+              <rect x="160" y="20" width="140" height="150" rx="8" fill="none" stroke="#A9C6E8" stroke-width="2.5"/>
+              <rect x="172" y="34" width="116" height="24" rx="3" fill="#8B5A3C" opacity="0.2"/>
+              <rect x="172" y="66" width="52" height="90" rx="3" fill="#A9C6E8" opacity="0.25"/>
+              <rect x="230" y="66" width="58" height="42" rx="3" fill="#4C7FB0" opacity="0.2"/>
+              <rect x="230" y="114" width="58" height="42" rx="3" fill="#4C7FB0" opacity="0.2"/>
+              <line x1="20" y1="200" x2="300" y2="200" stroke="#8B5A3C" stroke-width="1" stroke-dasharray="2 5" opacity="0.5"/>
+            </svg>
+            <span class="tag tag-bottom">MOBILE-FIRST &rarr; SCALES UP</span>
+          </div>
+        </div>
+      </div>
+
+      <ul class="info-card-grid reveal">
+        <li class="info-card">
+          <i class="fa-solid fa-code" aria-hidden="true"></i>
+          <h3>Semantic HTML</h3>
+          <p>Markup that describes structure and meaning.</p>
+        </li>
+        <li class="info-card">
+          <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+          <h3>Responsive Design</h3>
+          <p>Layouts that adapt fluidly to every viewport.</p>
+        </li>
+        <li class="info-card">
+          <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+          <h3>Accessibility</h3>
+          <p>Interfaces usable by everyone, every way.</p>
+        </li>
+        <li class="info-card">
+          <i class="fa-solid fa-gear" aria-hidden="true"></i>
+          <h3>Modern Standards</h3>
+          <p>Built on current, well-supported web APIs.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="toolkit" id="toolkit">
+    <div class="container">
+      <p class="eyebrow center">FIG. 03 &mdash; MATERIALS LIST</p>
+      <h2 class="section-title center">The Toolkit</h2>
+      <p class="section-lead center">Three core technologies. Zero dependencies.</p>
+
+      <div class="card-grid">
+        <article class="tool-card reveal">
+          <div class="tool-icon html"><i class="fa-brands fa-html5"></i></div>
+          <h3>HTML5</h3>
+          <p>Semantic structure and accessibility. The skeleton that gives every page meaning for browsers, search engines and assistive tech alike.</p>
+        </article>
+        <article class="tool-card reveal">
+          <div class="tool-icon css"><i class="fa-brands fa-css3-alt"></i></div>
+          <h3>CSS3</h3>
+          <p>Styling, Flexbox, Grid, animations and responsive design. The visual language that turns structure into an experience.</p>
+        </article>
+        <article class="tool-card reveal">
+          <div class="tool-icon js"><i class="fa-brands fa-square-js"></i></div>
+          <h3>JavaScript</h3>
+          <p>Interactive functionality and DOM manipulation. The behaviour layer that responds to every click, scroll and keystroke.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="strategy" id="strategy">
+    <div class="container">
+      <p class="eyebrow center">FIG. 04 &mdash; PROCESS</p>
+      <h2 class="section-title center">Strategy &amp; Blueprint</h2>
+
+      <div class="strategy-grid">
+        <ol class="strategy-list reveal">
+          <li>
+            <span class="step-tag">01</span>
+            <div>
+              <h3>User Research</h3>
+              <p>Understand who will use the interface, on which devices, and what they need it to do.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-tag">02</span>
+            <div>
+              <h3>Wireframing</h3>
+              <p>Sketch the skeleton of the page &mdash; content blocks and hierarchy, before any visual styling.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-tag">03</span>
+            <div>
+              <h3>Planning Layout</h3>
+              <p>Decide how Grid and Flexbox will arrange the page across breakpoints.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-tag">04</span>
+            <div>
+              <h3>User Experience</h3>
+              <p>Refine flow, feedback and accessibility so the interface feels effortless.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="wireframe-illustration reveal" aria-hidden="true">
+          <div class="corner-frame small">
+            <span class="tag tag-top">FIG.04</span>
+            <svg viewBox="0 0 320 260" class="wireframe-svg" role="img" aria-label="Wireframe sketch of a webpage with header, navigation, hero, content and footer blocks">
+              <rect x="14" y="14" width="292" height="232" rx="6" fill="none" stroke="#8B5A3C" stroke-width="2"/>
+              <rect x="26" y="26" width="268" height="26" rx="3" fill="none" stroke="#4C7FB0" stroke-width="1.6" stroke-dasharray="3 3"/>
+              <circle cx="40" cy="39" r="5" fill="#A9C6E8"/>
+              <rect x="220" y="33" width="60" height="10" rx="2" fill="#A9C6E8"/>
+              <rect x="26" y="60" width="268" height="60" rx="3" fill="#A9C6E8" opacity="0.18"/>
+              <rect x="120" y="80" width="80" height="8" rx="2" fill="#8B5A3C"/>
+              <rect x="140" y="94" width="40" height="14" rx="3" fill="none" stroke="#8B5A3C" stroke-width="1.4"/>
+              <rect x="26" y="128" width="128" height="80" rx="3" fill="none" stroke="#4C7FB0" stroke-width="1.6" stroke-dasharray="3 3"/>
+              <rect x="162" y="128" width="132" height="38" rx="3" fill="none" stroke="#4C7FB0" stroke-width="1.6" stroke-dasharray="3 3"/>
+              <rect x="162" y="170" width="132" height="38" rx="3" fill="none" stroke="#4C7FB0" stroke-width="1.6" stroke-dasharray="3 3"/>
+              <rect x="26" y="216" width="268" height="18" rx="3" fill="#8B5A3C" opacity="0.25"/>
+            </svg>
+            <span class="tag tag-bottom">WIREFRAME &mdash; REV. A</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visual-design" id="design">
+    <div class="container">
+      <p class="eyebrow center">FIG. 05 &mdash; SPECIFICATION SHEET</p>
+      <h2 class="section-title center">Visual Design</h2>
+
+      <div class="design-grid">
+        <div class="palette-block reveal">
+          <h3>Color Palette</h3>
+          <ul class="swatch-list">
+            <li>
+              <span class="swatch swatch-mocha"></span>
+              <div><strong>Mocha Brown</strong><code>#8B5A3C</code><p>Primary accent &mdash; calls to action, emphasis.</p></div>
+            </li>
+            <li>
+              <span class="swatch swatch-blue"></span>
+              <div><strong>Light Blue</strong><code>#A9C6E8</code><p>Secondary accent &mdash; links, highlights, diagrams.</p></div>
+            </li>
+            <li>
+              <span class="swatch swatch-gray"></span>
+              <div><strong>Light Gray</strong><code>#F2F1EF</code><p>Surface tone &mdash; section backgrounds, cards.</p></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="type-block reveal">
+          <h3>Typography</h3>
+          <div class="type-sample">
+            <p class="type-label">Headings &mdash; Poppins</p>
+            <p class="type-demo type-heading">Aa Bb Cc 123</p>
+          </div>
+          <div class="type-sample">
+            <p class="type-label">Body &mdash; Roboto</p>
+            <p class="type-demo type-body">Aa Bb Cc 123 &mdash; the quick brown fox jumps over the lazy dog.</p>
+          </div>
+          <p class="type-explain">
+            Poppins' geometric weight gives headings presence and structure, while Roboto's
+            neutrality keeps long-form body copy easy to scan. Together they form a clear
+            hierarchy: bold display type for orientation, calm text for reading.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="semantic-layout" id="semantic">
+    <div class="container">
+      <p class="eyebrow center">FIG. 06 &mdash; STRUCTURAL ANATOMY</p>
+      <h2 class="section-title center">HTML5 Semantic Layout</h2>
+
+      <div class="semantic-grid">
+        <ul class="semantic-list reveal">
+          <li><code>&lt;header&gt;</code><p>Introductory content and site-wide navigation.</p></li>
+          <li><code>&lt;nav&gt;</code><p>A block of primary navigation links.</p></li>
+          <li><code>&lt;main&gt;</code><p>The document's dominant, unique content.</p></li>
+          <li><code>&lt;section&gt;</code><p>A thematic grouping of content, usually with a heading.</p></li>
+          <li><code>&lt;article&gt;</code><p>Self-contained content that could stand alone.</p></li>
+          <li><code>&lt;footer&gt;</code><p>Closing content &mdash; credits, links, contact info.</p></li>
+        </ul>
+
+        <div class="semantic-diagram reveal" aria-hidden="true">
+          <div class="corner-frame small">
+            <span class="tag tag-top">FIG.06</span>
+            <svg viewBox="0 0 320 280" class="semantic-svg" role="img" aria-label="Diagram of stacked semantic HTML5 elements forming a page">
+              <rect x="20" y="14" width="280" height="34" rx="4" fill="#8B5A3C" opacity="0.15" stroke="#8B5A3C" stroke-width="1.6"/>
+              <text x="160" y="35" text-anchor="middle" class="svg-label">header</text>
+              <rect x="20" y="54" width="280" height="24" rx="4" fill="#4C7FB0" opacity="0.15" stroke="#4C7FB0" stroke-width="1.6"/>
+              <text x="160" y="70" text-anchor="middle" class="svg-label">nav</text>
+              <rect x="20" y="84" width="280" height="150" rx="4" fill="none" stroke="#A9C6E8" stroke-width="1.6" stroke-dasharray="4 4"/>
+              <text x="160" y="100" text-anchor="middle" class="svg-label">main</text>
+              <rect x="34" y="108" width="120" height="110" rx="4" fill="#A9C6E8" opacity="0.15" stroke="#A9C6E8" stroke-width="1.4"/>
+              <text x="94" y="126" text-anchor="middle" class="svg-label small">section</text>
+              <rect x="44" y="136" width="100" height="38" rx="3" fill="none" stroke="#8B5A3C" stroke-width="1.2" stroke-dasharray="3 3"/>
+              <text x="94" y="158" text-anchor="middle" class="svg-label tiny">article</text>
+              <rect x="44" y="180" width="100" height="30" rx="3" fill="none" stroke="#8B5A3C" stroke-width="1.2" stroke-dasharray="3 3"/>
+              <text x="94" y="198" text-anchor="middle" class="svg-label tiny">article</text>
+              <rect x="166" y="108" width="120" height="110" rx="4" fill="#4C7FB0" opacity="0.12" stroke="#4C7FB0" stroke-width="1.4"/>
+              <text x="226" y="126" text-anchor="middle" class="svg-label small">aside</text>
+              <rect x="20" y="242" width="280" height="26" rx="4" fill="#8B5A3C" opacity="0.15" stroke="#8B5A3C" stroke-width="1.6"/>
+              <text x="160" y="259" text-anchor="middle" class="svg-label">footer</text>
+            </svg>
+            <span class="tag tag-bottom">PAGE ANATOMY &mdash; SCALE 1:1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="layout-implementation" id="layout">
+    <div class="container">
+      <p class="eyebrow center">FIG. 07 &mdash; CONSTRUCTION METHODS</p>
+      <h2 class="section-title center">Layout Implementation</h2>
+
+      <div class="layout-explain-grid reveal">
+        <div class="layout-explain-card">
+          <i class="fa-solid fa-table-cells-large"></i>
+          <h3>CSS Grid</h3>
+          <p>Two-dimensional layout for whole-page structure &mdash; rows and columns at once.</p>
+        </div>
+        <div class="layout-explain-card">
+          <i class="fa-solid fa-arrows-left-right-to-line"></i>
+          <h3>Flexbox</h3>
+          <p>One-dimensional alignment for components &mdash; navbars, cards, button groups.</p>
+        </div>
+        <div class="layout-explain-card">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <h3>Mobile-first</h3>
+          <p>Base styles target small screens; larger layouts are added progressively.</p>
+        </div>
+        <div class="layout-explain-card">
+          <i class="fa-solid fa-ruler-combined"></i>
+          <h3>Media Queries</h3>
+          <p>Conditional CSS that reshapes the interface at defined breakpoints.</p>
+        </div>
+      </div>
+
+      <p class="section-lead center reveal">A sample page assembled with a single CSS Grid template:</p>
+
+      <!-- Live CSS Grid demo -->
+      <div class="grid-demo reveal" role="img" aria-label="Sample webpage layout built with CSS Grid: header, sidebar, main content, aside and footer">
+        <div class="grid-demo-header">header</div>
+        <div class="grid-demo-sidebar">nav</div>
+        <div class="grid-demo-main">main / section</div>
+        <div class="grid-demo-aside">aside</div>
+        <div class="grid-demo-footer">footer</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="roadmap" id="roadmap">
+    <div class="container">
+      <p class="eyebrow center">FIG. 08 &mdash; BUILD SEQUENCE</p>
+      <h2 class="section-title center light">Execution Roadmap</h2>
+
+      <ol class="timeline reveal">
+        <li><span class="timeline-icon"><i class="fa-solid fa-magnifying-glass"></i></span><span class="timeline-label">Research</span></li>
+        <li><span class="timeline-icon"><i class="fa-solid fa-pen-ruler"></i></span><span class="timeline-label">Wireframe</span></li>
+        <li><span class="timeline-icon"><i class="fa-brands fa-html5"></i></span><span class="timeline-label">HTML Structure</span></li>
+        <li><span class="timeline-icon"><i class="fa-brands fa-css3-alt"></i></span><span class="timeline-label">CSS Styling</span></li>
+        <li><span class="timeline-icon"><i class="fa-brands fa-square-js"></i></span><span class="timeline-label">JavaScript</span></li>
+        <li><span class="timeline-icon"><i class="fa-solid fa-vial"></i></span><span class="timeline-label">Testing</span></li>
+        <li><span class="timeline-icon"><i class="fa-solid fa-rocket"></i></span><span class="timeline-label">Deployment</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="final-cta" id="final">
+    <div class="container final-grid">
+      <div class="final-mockup reveal" aria-hidden="true">
+        <div class="corner-frame small">
+          <span class="tag tag-top">FIG.09</span>
+          <div class="device-scene">
+            <div class="device laptop">
+              <div class="laptop-screen">
+                <div class="mock-nav"></div>
+                <div class="mock-hero"></div>
+                <div class="mock-row">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+              <div class="laptop-base"></div>
+            </div>
+            <div class="device phone">
+              <div class="phone-screen">
+                <div class="mock-nav small"></div>
+                <div class="mock-hero small"></div>
+                <div class="mock-line"></div>
+                <div class="mock-line short"></div>
+              </div>
+            </div>
+          </div>
+          <span class="tag tag-bottom">RESPONSIVE PREVIEW</span>
+        </div>
+      </div>
+
+      <div class="final-copy reveal">
+        <p class="eyebrow">FIG. 09 &mdash; FINAL REVIEW</p>
+        <h2>You Are the<br><span class="accent-text">Architect</span></h2>
+        <p class="section-lead">
+          The blueprint is complete. Every semantic tag, every grid track, every line of
+          JavaScript is now yours to draft, test and ship.
+        </p>
+
+        <div class="next-steps-card">
+          <div class="next-steps-header">
+            <h3>Next Steps</h3>
+            <span class="progress-count" id="progressCount">0 / 7</span>
+          </div>
+          <ul class="checklist" id="checklist">
+            <li><label><input type="checkbox" class="check-input"><span class="check-box"><i class="fa-solid fa-check"></i></span>Open your IDE</label></li>
+            <li><label><input type="checkbox" class="check-input"><span class="check-box"><i class="fa-solid fa-check"></i></span>Create project folders</label></li>
+            <li><label><input type="checkbox" class="check-input"><span class="check-box"><i class="fa-solid fa-check"></i></span>Write HTML structure</label></li>
+            <li><label><input type="checkbox" class="check-input"><span class="check-box"><i class="fa-solid fa-check"></i></span>Style with CSS</label></li>
+            <li><label><input type="checkbox" class="check-input"><span class="check-box"><i class="fa-solid fa-check"></i></span>Add JavaScript</label></li>
+            <li><label><input type="checkbox" class="check-input"><span class="check-box"><i class="fa-solid fa-check"></i></span>Test responsiveness</label></li>
+            <li><label><input type="checkbox" class="check-input"><span class="check-box"><i class="fa-solid fa-check"></i></span>Deploy the project</label></li>
+          </ul>
+          <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <p class="footer-title">Blueprint<span class="accent">.dev</span></p>
+      <p>Responsive Frontend Interface &mdash; drafted in HTML5, CSS3 &amp; vanilla JavaScript.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer">
+      <h4>Sections</h4>
+      <a href="#vision">Vision</a>
+      <a href="#toolkit">Toolkit</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#final">Get Started</a>
+    </nav>
+
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><i class="fa-solid fa-envelope"></i> hello@blueprint.dev</p>
+      <p><i class="fa-solid fa-phone"></i> +1 (555) 010-2024</p>
+      <p><i class="fa-solid fa-location-dot"></i> Remote &mdash; Worldwide</p>
+    </div>
+
+    <div class="footer-social">
+      <h4>Follow</h4>
+      <div class="social-icons">
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year"></span> Responsive Frontend Interface. All rights reserved.</p>
+    <button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
